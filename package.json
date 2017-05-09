@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/SinanMtl/vue-rate/issues"
   },
-  "homepage": "https://github.com/SinanMtl/vue-rate#readme"
+  "homepage": "https://github.com/SinanMtl/vue-rate#readme",
+  "devDependencies": {
+    "vue": "^2.1.4"
+  }
 }
