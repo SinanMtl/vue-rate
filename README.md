@@ -6,13 +6,13 @@
 
 Once, install rate component for your project
 
-```
+```bash
 npm install vue-rate --save
 ```
 
-Import your app
+Import Vue Rate into your app
 
-```
+```javascript
 import Rate from 'vue-rate';
 
 new Vue({
@@ -21,30 +21,39 @@ new Vue({
     }
 })
 ```
-HTML template
-```
+
+Use HTML template
+
+```html
 <Rate :length="5"></Rate>
 ```
 
 ## Options from props
-- length {number} : Star size
-```
+
+- `length {number}`: Star size
+
+```html
 <Rate :length="5"></Rate>
 ```
 
-- value {number}: Default value
-```
+- `value {number}`: Default value
+
+```html
 <Rate :length="5" :value="2"></Rate>
 ```
 
-- showcount {boolean}: Shows rate number when mouseover the star.
+- `showcount {boolean}`: Shows rate number when mouseover the star.
 
-```
+```html
 <Rate :length="5" :value="2" :showcount="true"></Rate>
 ```
 
-- ratedesc {object}: Rate star description array. 
+- `ratedesc {object}`: Rate star description array. 
 
-```
+```html
 <Rate :length="5" :value="2" :ratedesc="['Very bad', 'bad', 'Normal', 'Good', 'Very good']"></Rate>
 ```
+
+## License
+
+MIT.
