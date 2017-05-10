@@ -51,7 +51,11 @@ export default {
   methods: {
     onOver (index) { this.over = index },
     onOut () { this.over = this.rate },
-    setRate (index) { this.rate = index },
+    setRate (index) {
+      this.$emit('beforeRate', this.rate)
+      this.rate = index
+      this.$emit('afterRate', this.rate)
+    },
     isFilled (index) { return index <= this.over },
     isEmpty (index) {
       return index > this.over || !this.value && !this.over
