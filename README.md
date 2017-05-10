@@ -57,6 +57,27 @@ Use HTML template
 <Rate :length="5" :value="2" :ratedesc="['Very bad', 'bad', 'Normal', 'Good', 'Very good']"></Rate>
 ```
 
+## Events
+
+```javascript
+new Vue({
+    ...
+    methods: {
+        onBeforeRate (rate) {
+            alert(rate)
+        },
+        onAfterRate (rate) {
+            alert(rate)
+        }
+    }
+    ...
+})
+```
+
+```html
+<Rate :length="5" :value="2" @beforeRate="onBeforeRate" @afterRate="onAftereRate"></Rate>
+```
+
 ## License
 
 MIT.
