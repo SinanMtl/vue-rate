@@ -1,5 +1,7 @@
 # Vue Rate
 
+[![npm version](https://badge.fury.io/js/vue-rate.svg)](https://badge.fury.io/js/vue-rate)
+
 > Rate component for Vue - [Demo](https://sinanmtl.github.io/vue-rate/)
 
 ## Installation and usage
