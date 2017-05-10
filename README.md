@@ -1,7 +1,7 @@
 # Vue Rate
 
 [![npm version](https://badge.fury.io/js/vue-rate.svg)](https://badge.fury.io/js/vue-rate)
-[![npm](https://img.shields.io/npm/dt/vue-flickity.svg)](https://www.npmjs.com/package/vue-flickity)
+[![npm](https://img.shields.io/npm/dt/vue-rate.svg)](https://www.npmjs.com/package/vue-rate)
 
 > Rate component for Vue - [Demo](https://sinanmtl.github.io/vue-rate/)
 
