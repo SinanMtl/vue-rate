@@ -1,6 +1,7 @@
 # Vue Rate
 
-[![npm version](https://badge.fury.io/js/vue-rate.svg)](https://badge.fury.io/js/vue-rate)
+[![npm version](https://badge.fury.io/js/vue-rate.svg)](https://www.npmjs.com/package/vue-rate)
+[![npm](https://img.shields.io/npm/dt/vue-rate.svg)](https://www.npmjs.com/package/vue-rate)
 
 > Rate component for Vue - [Demo](https://sinanmtl.github.io/vue-rate/)
 
@@ -54,6 +55,27 @@ Use HTML template
 
 ```html
 <Rate :length="5" :value="2" :ratedesc="['Very bad', 'bad', 'Normal', 'Good', 'Very good']"></Rate>
+```
+
+## Events
+
+```javascript
+new Vue({
+    ...
+    methods: {
+        onBeforeRate (rate) {
+            alert(rate)
+        },
+        onAfterRate (rate) {
+            alert(rate)
+        }
+    }
+    ...
+})
+```
+
+```html
+<Rate :length="5" :value="2" @beforeRate="onBeforeRate" @afterRate="onAftereRate"></Rate>
 ```
 
 ## License
