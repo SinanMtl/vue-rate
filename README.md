@@ -57,6 +57,12 @@ Use HTML template
 <Rate :length="5" :value="2" :ratedesc="['Very bad', 'bad', 'Normal', 'Good', 'Very good']"></Rate>
 ```
 
+- `disabled {boolean}`: Disable rate.
+
+```html
+<Rate :length="5" :value="2" :disabled="true"></Rate>
+```
+
 ## Events
 
 ```javascript
