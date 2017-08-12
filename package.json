@@ -26,8 +26,5 @@
   "devDependencies": {
     "vue": "^2.1.4"
   },
-  "dependencies": {
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6"
-  }
+  "dependencies": {}
 }
