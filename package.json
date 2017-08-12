@@ -24,8 +24,10 @@
   },
   "homepage": "https://github.com/SinanMtl/vue-rate#readme",
   "devDependencies": {
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
     "vue": "^2.1.4"
+  },
+  "dependencies": {
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
   }
 }
