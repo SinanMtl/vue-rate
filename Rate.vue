@@ -15,18 +15,18 @@
     </svg>
     <input type="hidden" :name="name" :value="rate" v-model="rate" :required="required">
     <template v-for="n in length">
-      <a href="javascript:;" :class="{'Rate__star': true, 'hover': n <= over, 'filled': n <= rate}" @mouseover="onOver(n)" @mouseout="onOut(n)" @click="setRate(n)" @keyup="onOver(n)"  @keyup.enter="setRate(n)">
+      <button type="button" :key="n" :class="{'Rate__star': true, 'hover': n <= over, 'filled': n <= rate}" @mouseover="onOver(n)" @mouseout="onOut(n)" @click="setRate(n)" @keyup="onOver(n)" @keyup.enter="setRate(n)" :disabled="disabled">
         <svg class="icon" v-show="isFilled(n)">
           <use xlink:href="#icon-star-full"></use>
         </svg>
         <svg class="icon" v-show="isEmpty(n)">
           <use xlink:href="#icon-star-empty"></use>
         </svg>
-      </a>
+      </button>
     </template>
-    <div class="Rate__view">
-      <span class="Rate__view__count" v-if="showcount">{{over}}</span>
-      <span class="Rate__view__desc" v-if="ratedesc.length > 0">{{ratedesc[over - 1]}}</span>
+    <div class="Rate__view" :class="{disabled: disabled}">
+      <span class="count" v-if="showcount">{{over}}</span>
+      <span class="desc" v-if="ratedesc.length > 0">{{ratedesc[over - 1]}}</span>
     </div>
   </div>
 </template>
@@ -40,7 +40,8 @@ export default {
     length: {type: Number},
     showcount: {type: Boolean},
     required: {type: Boolean},
-    ratedesc: { type: Array, default () { return [] } }
+    ratedesc: {type: Array, default () { return [] }},
+    disabled: {type: Boolean, default: false}
   },
   data () {
     return {
@@ -74,11 +75,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 .icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 16px;
+  height: 16px;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -88,46 +89,47 @@ export default {
   margin: 0 5px;
 }
 
-.Rate{
-  cursor: default;
+.Rate{cursor: default;}
 
-  &__star{
-    color: #b5b5b5;
-    display: inline-block;
-    padding: 7px;
-    text-decoration: none;
-    cursor: pointer;
-
-    .icon{
-      top: 0;
-      vertical-align: middle;
-    }
-    
-    &.hover{color: #efc20f;}
-    &.filled{color: #efc20f;}
-
-    &:hover, &:focus{
-      text-decoration: none;
-    }
-  }
-
-  &__view{
-
-    &__count, &__desc{
-      display: inline-block;
-      vertical-align: middle;
-      padding: 7px
-    }
-  }
-
-  &.has-error &{
-    &__star{
-      color: #f37a77;
-
-      &.hover{color: #efc20f;}
-      &.filled{color: #efc20f;}
-    }
-  }
+.Rate__star{
+  color: #b5b5b5;
+  display: inline-block;
+  padding: 7px;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent none;
+  border: 0;
 }
 
+.Rate__star .icon{
+  top: 0;
+  vertical-align: middle;
+}
+
+.Rate__star.hover{color: #efc20f;}
+.Rate__star.filled{color: #efc20f;}
+
+.Rate__star:hover, 
+.Rate__star:focus{text-decoration: none;}
+
+.Rate__view .count, 
+.Rate__view .desc{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 7px
+}
+
+.Rate.has-error .Rate__star{color: #f37a77;}
+.Rate.has-error .Rate__star.hover{color: #efc20f;}
+.Rate.has-error .Rate__star.filled{color: #efc20f;}
+
+.Rate__star[disabled]{
+  color: #CCC;
+  opacity: 0.8;
+}
+
+.Rate__view.disabled .count,
+.Rate__view.disabled .desc{
+  color: #CCC;
+}
 </style>

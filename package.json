@@ -1,6 +1,6 @@
 {
   "name": "vue-rate",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "Rate component for Vue",
   "main": "Rate.vue",
   "scripts": {
@@ -25,5 +25,6 @@
   "homepage": "https://github.com/SinanMtl/vue-rate#readme",
   "devDependencies": {
     "vue": "^2.1.4"
-  }
+  },
+  "dependencies": {}
 }
