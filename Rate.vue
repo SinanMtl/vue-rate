@@ -41,7 +41,8 @@ export default {
     showcount: {type: Boolean},
     required: {type: Boolean},
     ratedesc: {type: Array, default () { return [] }},
-    disabled: {type: Boolean, default: false}
+    disabled: {type: Boolean, default: false},
+    readonly: {type: Boolean, default: false}
   },
   data () {
     return {
@@ -50,9 +51,10 @@ export default {
     }
   },
   methods: {
-    onOver (index) { this.over = index },
-    onOut () { this.over = this.rate },
+    onOver (index) { if (!this.readonly) this.over = index },
+    onOut () { if (!this.readonly) this.over = this.rate },
     setRate (index) {
+      if (this.readonly) return false
       this.$emit('beforeRate', this.rate)
       this.rate = index
       this.$emit('afterRate', this.rate)
