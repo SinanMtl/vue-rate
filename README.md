@@ -63,6 +63,12 @@ Use HTML template
 <Rate :length="5" :value="2" :disabled="true"></Rate>
 ```
 
+- `readonly {boolean}`: Read-only rate.
+
+```html
+<Rate :length="5" :value="2" :readonly="true"></Rate>
+```
+
 ## Events
 
 ```javascript
