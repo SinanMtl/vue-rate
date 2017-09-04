@@ -35,7 +35,7 @@
 export default {
   name: 'rate',
   props: {
-    value: {type: Number},
+    value: {type: [Number, String]},
     name: {type: String, default: 'rate'},
     length: {type: Number},
     showcount: {type: Boolean},
