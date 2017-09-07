@@ -57,8 +57,8 @@ export default {
       if (this.readonly) return false
       this.$emit('beforeRate', this.rate)
       this.rate = index
-      this.$emit('afterRate', this.rate)
       this.$emit('input', this.rate)
+      this.$emit('afterRate', this.rate)
     },
     isFilled (index) { return index <= this.over },
     isEmpty (index) {
