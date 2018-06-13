@@ -51,6 +51,14 @@ export default {
     }
   },
   methods: {
+    convertValue(value) {
+      if (value >= this.length) {
+        value = this.length
+      } else if (value < 0) {
+        value = 0
+      }
+      return value
+    },
     onOver (index) { if (!this.readonly) this.over = index },
     onOut () { if (!this.readonly) this.over = this.rate },
     setRate (index) {
@@ -65,14 +73,20 @@ export default {
       return index > this.over || !this.value && !this.over
     }
   },
+  watch: {
+    value(val) {
+      this.rate = this.convertValue(this.value)
+      this.over = this.convertValue(this.value)
+    }
+  },
   created () {
     if (this.value >= this.length) {
       this.value = this.length
     } else if (this.value < 0) {
       this.value = 0
     }
-    this.rate = this.value
-    this.over = this.value
+    this.rate = this.convertValue(this.value)
+    this.over = this.convertValue(this.value)
   }
 }
 </script>
