@@ -5,6 +5,7 @@
 	"main": "dist/vue-rate.js",
 	"scripts": {
 		"build": "node webpack.build.conf.js",
+		"demo": "node webpack.demo.js",
 		"dev": "webpack-dev-server --config webpack.dev.conf.js"
 	},
 	"repository": {
