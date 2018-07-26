@@ -12,6 +12,7 @@ version:
 	@git commit -m `cat VERSION`
 	@npm version $(v)
 
+.PHONY:demo
 demo:
 	@make build
 	rm -rf /tmp/dist
