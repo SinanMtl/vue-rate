@@ -15,7 +15,7 @@ version:
 .PHONY:demo
 demo:
 	@npm run demo
-	rm -rf /tmp/dist
-	cp -a dist /tmp/dist
+	rm -rf /tmp/demo
+	cp -a demo /tmp/demo
 	git checkout gh-pages
-	cp -a /tmp/dist/ .
+	cp -a /tmp/demo/ .
