@@ -2,11 +2,6 @@
   <div class="Rate" v-if="length > 0">
     <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
-        <symbol id="icon-star-empty" viewBox="0 0 32 32">
-          <title>star-empty</title>
-          <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z"></path>
-        </symbol>
-
         <symbol id="icon-star-full" viewBox="0 0 32 32">
           <title>star-full</title>
           <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
@@ -15,12 +10,9 @@
     </svg>
     <input type="hidden" :name="name" v-model="rate" :required="required">
     <template v-for="n in length">
-      <button type="button" :key="n" :class="{'Rate__star': true, 'hover': n <= over, 'filled': n <= rate}" @mouseover="onOver(n)" @mouseout="onOut(n)" @click="setRate(n)" @keyup="onOver(n)" @keyup.enter="setRate(n)" :disabled="disabled">
-        <svg class="icon" v-show="isFilled(n)">
+      <button type="button" :key="n" :class="{'Rate__star': true, 'hover': n <= over, 'filled': (n <= rate || isFilled(n))}" @mouseover="onOver(n)" @mouseout="onOut(n)" @click="setRate(n)" @keyup="onOver(n)" @keyup.enter="setRate(n)" :disabled="disabled">
+        <svg class="icon">
           <use xlink:href="#icon-star-full"></use>
-        </svg>
-        <svg class="icon" v-show="isEmpty(n)">
-          <use xlink:href="#icon-star-empty"></use>
         </svg>
       </button>
     </template>
@@ -109,7 +101,7 @@ export default {
 .Rate{cursor: default;}
 
 .Rate__star{
-  color: #b5b5b5;
+  color: #dedbdb;
   display: inline-block;
   padding: 7px;
   text-decoration: none;
@@ -123,8 +115,12 @@ export default {
   vertical-align: middle;
 }
 
-.Rate__star.hover{color: #efc20f;}
-.Rate__star.filled{color: #efc20f;}
+.Rate__star.hover{
+  color: #efc20f;
+}
+.Rate__star.filled{
+  color: #efc20f;
+}
 
 .Rate__star:hover, 
 .Rate__star:focus{text-decoration: none;}
@@ -141,8 +137,13 @@ export default {
 .Rate.has-error .Rate__star.filled{color: #efc20f;}
 
 .Rate__star[disabled]{
-  color: #CCC;
   opacity: 0.8;
+}
+
+.Rate__star.hover[disabled],
+.Rate__star.filled[disabled]{
+  color: #efc20f;
+  opacity: 0.6;
 }
 
 .Rate__view.disabled .count,
