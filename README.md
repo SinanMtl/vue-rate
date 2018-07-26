@@ -16,19 +16,15 @@ npm install vue-rate --save
 Import Vue Rate into your app
 
 ```javascript
-import Rate from 'vue-rate';
+import rate from 'vue-rate';
 
-new Vue({
-    components: {
-        Rate
-    }
-})
+Vue.use(rate)
 ```
 
 Use HTML template
 
 ```html
-<Rate :length="5"></Rate>
+<rate :length="5" />
 ```
 
 ## Options from props
@@ -36,58 +32,76 @@ Use HTML template
 - `length {number}`: Star size
 
 ```html
-<Rate :length="5"></Rate>
+<rate :length="5" />
 ```
 
 - `value {number}`: Default value
 
 ```html
-<Rate :length="5" :value="2"></Rate>
+<rate :length="5" :value="2" />
 ```
 
 - `showcount {boolean}`: Shows rate number when mouseover the star.
 
 ```html
-<Rate :length="5" :value="2" :showcount="true"></Rate>
+<rate :length="5" :value="2" :showcount="true" />
 ```
 
 - `ratedesc {object}`: Rate star description array. 
 
 ```html
-<Rate :length="5" :value="2" :ratedesc="['Very bad', 'bad', 'Normal', 'Good', 'Very good']"></Rate>
+<rate :length="5" :value="2" :ratedesc="['Very bad', 'bad', 'Normal', 'Good', 'Very good']" />
 ```
 
 - `disabled {boolean}`: Disable rate.
 
 ```html
-<Rate :length="5" :value="2" :disabled="true"></Rate>
+<rate :length="5" :value="2" :disabled="true" />
 ```
 
 - `readonly {boolean}`: Read-only rate.
 
 ```html
-<Rate :length="5" :value="2" :readonly="true"></Rate>
+<rate :length="5" :value="2" :readonly="true" />
+```
+
+- `v-model`
+
+```javascript
+new Vue({
+  ...
+  data: {
+    return () {
+      myRate: 0
+    }
+  }
+  ...
+})
+```
+
+```html
+<rate :length="5" v-model="myRate" />
 ```
 
 ## Events
 
 ```javascript
 new Vue({
-    ...
-    methods: {
-        onBeforeRate (rate) {
-            alert(rate)
-        },
-        onAfterRate (rate) {
-            alert(rate)
-        }
+  ...
+  methods: {
+    onBeforeRate (rate) {
+      alert(rate)
+    },
+    onAfterRate (rate) {
+      alert(rate)
     }
-    ...
+  }
+  ...
 })
 ```
 
 ```html
-<Rate :length="5" :value="2" @beforeRate="onBeforeRate" @afterRate="onAftereRate"></Rate>
+<rate :length="5" :value="2" @before-rate="onBeforeRate" @after-rate="onAftereRate" />
 ```
 
 ## License
