@@ -3,8 +3,6 @@ var path = require('path')
 var chalk = require('chalk')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
-var version = require('./package.json').version
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -30,14 +28,6 @@ var config = {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    // copy custom static assets
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, 'static'),
-        to: path.resolve(__dirname, 'demo/static'),
-        ignore: ['.*']
-      }
-    ]),
     new HtmlWebpackPlugin({
       filename: './index.html',
       template: 'index.html',
@@ -63,14 +53,6 @@ var config = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
-      },
-      {
-        test: /\.svg$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: path.posix.join('static/', '[name].[hash:7].[ext]')
-        }
       }
     ]
   },

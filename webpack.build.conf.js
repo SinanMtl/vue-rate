@@ -2,7 +2,6 @@ var ora = require('ora')
 var path = require('path')
 var chalk = require('chalk')
 var webpack = require('webpack')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
 var version = require('./package.json').version
 
 var banner = `
@@ -33,15 +32,7 @@ var config = {
 				NODE_ENV: JSON.stringify('production')
 			}
 		}),
-		new webpack.BannerPlugin(banner),
-		// copy custom static assets
-		new CopyWebpackPlugin([
-			{
-				from: path.resolve(__dirname, 'static'),
-				to: path.resolve(__dirname, 'dist/static'),
-				ignore: ['.*']
-			}
-		])
+		new webpack.BannerPlugin(banner)
 	],
 	module: {
 		rules: [
@@ -53,14 +44,6 @@ var config = {
 			{
 				test: /\.vue$/,
 				loader: 'vue-loader'
-			},
-			{
-				test: /\.svg$/,
-				loader: 'url-loader',
-				options: {
-					limit: 10000,
-					name: path.posix.join('static/', '[name].[hash:7].[ext]')
-				}
 			}
 		]
 	},
