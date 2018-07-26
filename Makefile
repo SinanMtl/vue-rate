@@ -14,7 +14,7 @@ version:
 
 .PHONY:demo
 demo:
-	@make build
+	@npm run demo
 	rm -rf /tmp/dist
 	cp -a dist /tmp/dist
 	git checkout gh-pages
