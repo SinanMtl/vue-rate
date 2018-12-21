@@ -1,5 +1,5 @@
 <template>
-  <div class="App">
+  <div id="app">
     <div class="container">
       <h1 style="margin-bottom: 20px;">Vue Rate Component</h1>
       <h2>Active Form</h2>
@@ -95,46 +95,53 @@ export default {
 </script>
 
 <style>
-  *{box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-  body{
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: Avenir,Helvetica,Arial,sans-serif;
-    margin: 0;
-    padding: 0;
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid [class*=col-] {
+  padding: 0 20px;
+}
+
+.grid .col-3 {
+  width: 100%
+}
+
+@media screen and (min-width: 768px) {
+  .grid .col-3 {
+    width: 50%
   }
+}
 
-  .App{
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px
+@media screen and (min-width: 992px) {
+  .grid .col-3 {
+    width: 25%;
   }
-
-  .container{
-    max-width: 1200px;
-    padding: 0 20px;
-    margin: 0 auto
-  }
-
-  .grid{
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .grid [class*=col-]{padding: 0 20px;}
-  .grid .col-3{width: 100%}
-
-  @media screen and (min-width: 768px) {
-    .grid .col-3{
-      width:50%
-    }
-  }
-
-  @media screen and (min-width: 992px) {
-    .grid .col-3{
-      width: 25%;
-    }
-  }
+}
 </style>
 
