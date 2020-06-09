@@ -3,7 +3,6 @@
     <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <symbol id="icon-star-full" viewBox="0 0 32 32">
-          <title>star-full</title>
           <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
         </symbol>
       </defs>
@@ -12,7 +11,7 @@
     <template v-for="n in length">
       <button type="button" :key="n" :class="{'Rate__star': true, 'hover': n <= over, 'filled': (n <= rate || isFilled(n))}" @mouseover="onOver(n)" @mouseout="onOut(n)" @click="setRate(n)" @keyup="onOver(n)" @keyup.enter="setRate(n)" :disabled="disabled">
         <svg class="icon">
-          <use xlink:href="#icon-star-full"></use>
+          <use :xlink:href="`#${iconref}`"></use>
         </svg>
       </button>
     </template>
@@ -34,7 +33,8 @@ export default {
     required: {type: Boolean},
     ratedesc: {type: Array, default () { return [] }},
     disabled: {type: Boolean, default: false},
-    readonly: {type: Boolean, default: false}
+    readonly: {type: Boolean, default: false},
+    iconref: { type: String, default: 'icon-star-full' }
   },
   data () {
     return {
@@ -84,8 +84,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.icon {
+<style>
+.Rate{cursor: default;}
+
+.Rate .icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -97,8 +99,6 @@ export default {
   position: relative;
   margin: 0 5px;
 }
-
-.Rate{cursor: default;}
 
 .Rate__star{
   color: #dedbdb;
