@@ -16,7 +16,8 @@ npm install vue-rate --save
 Import Vue Rate into your app
 
 ```javascript
-import rate from 'vue-rate';
+import rate from 'vue-rate'
+import 'vue-rate/dist/vue-rate.css'
 
 Vue.use(rate)
 ```

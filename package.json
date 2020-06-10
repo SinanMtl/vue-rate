@@ -1,13 +1,8 @@
 {
 	"name": "vue-rate",
-	"version": "2.3.0",
+	"version": "2.4.0",
 	"description": "Rate component for Vue",
-	"main": "dist/vue-rate.js",
-	"scripts": {
-		"build": "node webpack.build.conf.js",
-		"demo": "node webpack.demo.js",
-		"dev": "webpack-dev-server --config webpack.dev.conf.js"
-	},
+	"main": "dist/vue-rate.umd.min.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/SinanMtl/vue-rate.git"
@@ -25,37 +20,18 @@
 		"url": "https://github.com/SinanMtl/vue-rate/issues"
 	},
 	"homepage": "https://github.com/SinanMtl/vue-rate#readme",
+	"scripts": {
+		"dev": "vue-cli-service serve src/main.js",
+		"build": "vue-cli-service build --target lib --inilne-vue --name vue-rate build.js && rm dist/demo.html",
+		"demo": "vue-cli-service build --mode=demo --dest=demo",
+		"lint": "vue-cli-service lint"
+	},
 	"dependencies": {
-		"babel-runtime": "^6.26.0",
-		"vue": "^2.4.2"
+		"vue": "^2.5.21"
 	},
 	"devDependencies": {
-		"babel-core": "^6.26.0",
-		"babel-loader": "^7.1.4",
-		"babel-plugin-transform-runtime": "^6.23.0",
-		"babel-preset-es2015": "^6.24.1",
-		"babel-preset-stage-0": "^6.24.1",
-		"chalk": "^2.3.2",
-		"copy-webpack-plugin": "^4.5.1",
-		"css-loader": "^0.28.10",
-		"extract-text-webpack-plugin": "^3.0.2",
-		"friendly-errors-webpack-plugin": "^1.6.1",
-		"html-webpack-plugin": "^3.0.6",
-		"ora": "^2.0.0",
-		"stats-webpack-plugin": "^0.6.2",
-		"url-loader": "^1.0.1",
-		"vue-html-loader": "^1.2.4",
-		"vue-loader": "^14.2.1",
-		"vue-style-loader": "^4.0.2",
-		"vue-template-compiler": "^2.4.2",
-		"webpack": "^4.1.1",
-		"webpack-cli": "^2.0.12",
-		"webpack-dev-server": "^3.1.1"
-	},
-	"browser": {
-		"vue": "vue/dist/vue.common.js"
-	},
-	"files": [
-		"dist/vue-rate.js"
-	]
+		"@vue/cli-plugin-eslint": "^3.2.1",
+		"@vue/cli-service": "^3.2.0",
+		"vue-template-compiler": "^2.5.21"
+	}
 }
