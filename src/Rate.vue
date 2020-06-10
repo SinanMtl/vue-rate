@@ -66,7 +66,7 @@ export default {
     }
   },
   watch: {
-    value(val) {
+    value() {
       this.rate = this.convertValue(this.value)
       this.over = this.convertValue(this.value)
     }
@@ -110,44 +110,55 @@ export default {
   border: 0;
 }
 
-.Rate__star .icon{
+.Rate__star .icon {
   top: 0;
   vertical-align: middle;
 }
 
-.Rate__star.hover{
-  color: #efc20f;
-}
-.Rate__star.filled{
+.Rate__star.hover {
   color: #efc20f;
 }
 
-.Rate__star:hover, 
-.Rate__star:focus{text-decoration: none;}
+.Rate__star.filled {
+  color: #efc20f;
+}
 
-.Rate__view .count, 
-.Rate__view .desc{
+.Rate__star:hover,
+.Rate__star:focus {
+  text-decoration: none;
+}
+
+.Rate__view .count,
+.Rate__view .desc {
   display: inline-block;
   vertical-align: middle;
   padding: 7px
 }
 
-.Rate.has-error .Rate__star{color: #f37a77;}
-.Rate.has-error .Rate__star.hover{color: #efc20f;}
-.Rate.has-error .Rate__star.filled{color: #efc20f;}
+.Rate.has-error .Rate__star {
+  color: #f37a77;
+}
 
-.Rate__star[disabled]{
+.Rate.has-error .Rate__star.hover {
+  color: #efc20f;
+}
+
+.Rate.has-error .Rate__star.filled {
+  color: #efc20f;
+}
+
+.Rate__star[disabled] {
   opacity: 0.8;
 }
 
 .Rate__star.hover[disabled],
-.Rate__star.filled[disabled]{
+.Rate__star.filled[disabled] {
   color: #efc20f;
   opacity: 0.6;
 }
 
 .Rate__view.disabled .count,
-.Rate__view.disabled .desc{
+.Rate__view.disabled .desc {
   color: #CCC;
 }
 </style>
