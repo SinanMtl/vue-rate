@@ -119,6 +119,17 @@ new Vue({
 <rate :length="5" :value="2" @before-rate="onBeforeRate" @after-rate="onAftereRate" />
 ```
 
+## Development
+1. Fork the project
+2. Install all dependencies
+3. Make your changes on `src/Rate.vue`
+4. Build the package
+```bash
+yarn build
+# or npm run build
+```
+5. Commit and create PR
+
 ## License
 
 MIT.

@@ -2,7 +2,7 @@ import Rate from './src/Rate.vue'
 
 function install(Vue) {
 	Vue.component(Rate.name, Rate)
-	window.Rate = Rate
+	global.Rate = Rate
 }
 
 export {
