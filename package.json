@@ -1,6 +1,6 @@
 {
 	"name": "vue-rate",
-	"version": "2.4.0",
+	"version": "2.4.1",
 	"description": "Rate component for Vue",
 	"main": "dist/vue-rate.umd.min.js",
 	"repository": {
@@ -22,9 +22,10 @@
 	"homepage": "https://github.com/SinanMtl/vue-rate#readme",
 	"scripts": {
 		"dev": "vue-cli-service serve src/main.js",
-		"build": "vue-cli-service build --target lib --inilne-vue --name vue-rate build.js && rm dist/demo.html",
+		"build": "vue-cli-service build --target lib --inilne-vue --name vue-rate build.js && rm dist/demo.html && npm run types",
 		"demo": "vue-cli-service build --mode=demo --dest=demo",
-		"lint": "vue-cli-service lint"
+		"lint": "vue-cli-service lint",
+		"types": "cp vue-rate.d.ts dist/vue-rate.common.d.ts && cp vue-rate.d.ts dist/vue-rate.umd.d.ts && cp vue-rate.d.ts dist/vue-rate.umd-min.d.ts "
 	},
 	"dependencies": {
 		"vue": "^2.5.21"

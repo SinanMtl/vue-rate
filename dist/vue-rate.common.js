@@ -94,38 +94,17 @@ module.exports =
 /* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Rate_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("8caf");
 /* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Rate_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Rate_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Rate_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
 
 /***/ }),
 
-/***/ "8caf":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "fb15":
+/***/ "7b08":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
-// This file is imported into lib/wc client bundles.
-
-if (typeof window !== 'undefined') {
-  var i
-  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
-    __webpack_require__.p = i[1] // eslint-disable-line
-  }
-}
-
-// Indicate to webpack that this file can be concatenated
-/* harmony default export */ var setPublicPath = (null);
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"ca0e2238-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Rate.vue?vue&type=template&id=cc93d0b0&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.length > 0)?_c('div',{staticClass:"Rate"},[_c('svg',{staticStyle:{"position":"absolute","width":"0","height":"0"},attrs:{"width":"0","height":"0","version":"1.1","xmlns":"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink"}},[_c('defs',[_c('symbol',{attrs:{"id":"icon-star-full","viewBox":"0 0 32 32"}},[_c('path',{attrs:{"d":"M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"}})])])]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.rate),expression:"rate"}],attrs:{"type":"hidden","name":_vm.name,"required":_vm.required},domProps:{"value":(_vm.rate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.rate=$event.target.value}}}),_vm._l((_vm.length),function(n){return [_c('button',{key:n,class:{'Rate__star': true, 'hover': n <= _vm.over, 'filled': (n <= _vm.rate || _vm.isFilled(n))},attrs:{"type":"button","disabled":_vm.disabled},on:{"mouseover":function($event){_vm.onOver(n)},"mouseout":function($event){_vm.onOut(n)},"click":function($event){_vm.setRate(n)},"keyup":[function($event){_vm.onOver(n)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }_vm.setRate(n)}]}},[_c('svg',{staticClass:"icon"},[_c('use',{attrs:{"xlink:href":("#" + _vm.iconref)}})])])]}),_c('div',{staticClass:"Rate__view",class:{disabled: _vm.disabled}},[(_vm.showcount)?_c('span',{staticClass:"count"},[_vm._v(_vm._s(_vm.over))]):_vm._e(),(_vm.ratedesc.length > 0)?_c('span',{staticClass:"desc"},[_vm._v(_vm._s(_vm.ratedesc[_vm.over - 1]))]):_vm._e()])],2):_vm._e()}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0ec0a552-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Rate.vue?vue&type=template&id=cc93d0b0&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.length > 0)?_c('div',{staticClass:"Rate"},[_c('svg',{staticStyle:{"position":"absolute","width":"0","height":"0"},attrs:{"width":"0","height":"0","version":"1.1","xmlns":"http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink"}},[_c('defs',[_c('symbol',{attrs:{"id":"icon-star-full","viewBox":"0 0 32 32"}},[_c('path',{attrs:{"d":"M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"}})])])]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.rate),expression:"rate"}],attrs:{"type":"hidden","name":_vm.name,"required":_vm.required},domProps:{"value":(_vm.rate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.rate=$event.target.value}}}),_vm._l((_vm.length),function(n){return [_c('button',{key:n,class:{'Rate__star': true, 'hover': n <= _vm.over, 'filled': (n <= _vm.rate || _vm.isFilled(n))},attrs:{"type":"button","disabled":_vm.disabled},on:{"mouseover":function($event){return _vm.onOver(n)},"mouseout":function($event){return _vm.onOut(n)},"click":function($event){return _vm.setRate(n)},"keyup":[function($event){return _vm.onOver(n)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.setRate(n)}]}},[_c('svg',{staticClass:"icon"},[_c('use',{attrs:{"xlink:href":("#" + _vm.iconref)}})])])]}),_c('div',{staticClass:"Rate__view",class:{disabled: _vm.disabled}},[(_vm.showcount)?_c('span',{staticClass:"count"},[_vm._v(_vm._s(_vm.over))]):_vm._e(),(_vm.ratedesc.length > 0)?_c('span',{staticClass:"desc"},[_vm._v(_vm._s(_vm.ratedesc[_vm.over - 1]))]):_vm._e()])],2):_vm._e()}
 var staticRenderFns = []
 
 
@@ -286,7 +265,12 @@ function normalizeComponent (
     options._ssrRegister = hook
   } else if (injectStyles) {
     hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      ? function () {
+        injectStyles.call(
+          this,
+          (options.functional ? this.parent : this).$root.$options.shadowRoot
+        )
+      }
       : injectStyles
   }
 
@@ -295,7 +279,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functional component in vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -336,34 +320,152 @@ var component = normalizeComponent(
   
 )
 
-component.options.__file = "Rate.vue"
-/* harmony default export */ var Rate = (component.exports);
-// CONCATENATED MODULE: ./build.js
+/* harmony default export */ var Rate = __webpack_exports__["a"] = (component.exports);
+
+/***/ }),
+
+/***/ "8caf":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "c8ba":
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ "f262":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var _src_Rate_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("7b08");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _src_Rate_vue__WEBPACK_IMPORTED_MODULE_0__["a"]; });
+
 
 
 function install(Vue) {
-	Vue.component(Rate.name, Rate)
-	window.Rate = Rate
+	Vue.component(_src_Rate_vue__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].name, _src_Rate_vue__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])
+	global.Rate = _src_Rate_vue__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"]
 }
 
 
 
 // Plugin
-const build_plugin = {
+const plugin = {
 	install
 };
 
-/* harmony default export */ var build = (build_plugin);
+/* harmony default export */ __webpack_exports__["b"] = (plugin);
 
 if (typeof window !== 'undefined' && window.Vue) {
-	window.Vue.use(build_plugin)
+	window.Vue.use(plugin)
 }
 
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("c8ba")))
+
+/***/ }),
+
+/***/ "f6fd":
+/***/ (function(module, exports) {
+
+// document.currentScript polyfill by Adam Miller
+
+// MIT license
+
+(function(document){
+  var currentScript = "currentScript",
+      scripts = document.getElementsByTagName('script'); // Live NodeList collection
+
+  // If browser needs currentScript polyfill, add get currentScript() to the document object
+  if (!(currentScript in document)) {
+    Object.defineProperty(document, currentScript, {
+      get: function(){
+
+        // IE 6-10 supports script readyState
+        // IE 10+ support stack trace
+        try { throw new Error(); }
+        catch (err) {
+
+          // Find the second match for the "at" string to get file src url from stack.
+          // Specifically works with the format of stack traces in IE.
+          var i, res = ((/.*at [^\(]*\((.*):.+:.+\)$/ig).exec(err.stack) || [false])[1];
+
+          // For all scripts on the page, if src matches or if ready state is interactive, return the script tag
+          for(i in scripts){
+            if(scripts[i].src == res || scripts[i].readyState == "interactive"){
+              return scripts[i];
+            }
+          }
+
+          // If no match, return null
+          return null;
+        }
+      }
+    });
+  }
+})(document);
+
+
+/***/ }),
+
+/***/ "fb15":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "Rate", function() { return /* reexport */ build["a" /* Rate */]; });
+
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+// This file is imported into lib/wc client bundles.
+
+if (typeof window !== 'undefined') {
+  if (true) {
+    __webpack_require__("f6fd")
+  }
+
+  var i
+  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
+    __webpack_require__.p = i[1] // eslint-disable-line
+  }
+}
+
+// Indicate to webpack that this file can be concatenated
+/* harmony default export */ var setPublicPath = (null);
+
+// EXTERNAL MODULE: ./build.js
+var build = __webpack_require__("f262");
+
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
-/* concated harmony reexport Rate */__webpack_require__.d(__webpack_exports__, "Rate", function() { return Rate; });
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (build);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (build["b" /* default */]);
 
 
 
