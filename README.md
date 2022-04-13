@@ -112,7 +112,6 @@ or Composition API with `<script setup>`
 <script setup>
   import { ref } from 'vue';
   const myRate = ref(0);
-}
 <script>
 ```
 
