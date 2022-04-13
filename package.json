@@ -1,8 +1,9 @@
 {
 	"name": "vue-rate",
-	"version": "2.4.1",
+	"version": "3.0.0",
 	"description": "Rate component for Vue",
 	"main": "dist/vue-rate.umd.min.js",
+	"types": "dist/vue-rate.umd.min.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/SinanMtl/vue-rate.git"
@@ -12,10 +13,12 @@
 		"rate",
 		"component",
 		"vue.js",
-		"vue-component"
+		"vue-component",
+		"vue3"
 	],
 	"author": "Sinan Mutlu <sinanm17@gmail.com>",
 	"license": "MIT",
+	"sideEffects": false,
 	"bugs": {
 		"url": "https://github.com/SinanMtl/vue-rate/issues"
 	},
@@ -25,14 +28,17 @@
 		"build": "vue-cli-service build --target lib --inilne-vue --name vue-rate build.js && rm dist/demo.html && npm run types",
 		"demo": "vue-cli-service build --mode=demo --dest=demo",
 		"lint": "vue-cli-service lint",
-		"types": "cp vue-rate.d.ts dist/vue-rate.common.d.ts && cp vue-rate.d.ts dist/vue-rate.umd.d.ts && cp vue-rate.d.ts dist/vue-rate.umd-min.d.ts "
+		"types": "cp vue-rate.d.ts dist/vue-rate.common.d.ts && cp vue-rate.d.ts dist/vue-rate.umd.d.ts && cp vue-rate.d.ts dist/vue-rate.umd.min.d.ts "
 	},
 	"dependencies": {
-		"vue": "^2.5.21"
+		"vue": "^3.0.0"
 	},
 	"devDependencies": {
-		"@vue/cli-plugin-eslint": "^3.2.1",
-		"@vue/cli-service": "^3.2.0",
-		"vue-template-compiler": "^2.5.21"
-	}
+		"@vue/cli-service": "^5.0.4",
+		"vue-loader": "^17.0.0",
+		"vue-template-compiler": "^2.6.14"
+	},
+	"files": [
+		"dist"
+	]
 }

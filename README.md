@@ -1,25 +1,30 @@
 # Vue Rate
 
-[![npm version](https://badge.fury.io/js/vue-rate.svg)](https://www.npmjs.com/package/vue-rate)
-[![npm](https://img.shields.io/npm/dt/vue-rate.svg)](https://www.npmjs.com/package/vue-rate)
+[![npm version](https://badge.fury.io/js/vue-rate@next.svg)](https://www.npmjs.com/package/vue-rate@next)
+[![npm](https://img.shields.io/npm/dt/vue-rate@next.svg)](https://www.npmjs.com/package/vue-rate@next)
 
-> Rate component for Vue - [Demo](https://sinanmtl.github.io/vue-rate/)
+> Rate component for Vue - [Demo](https://sinanmtl.github.io/vue-rate/).
+> Note: This version for Vue 3. If you want to use for Vue 2.x,  please [see](https://github.com/SinanMtl/vue-rate/tree/master).
 
 ## Installation and usage
 
 Once, install rate component for your project
 
 ```bash
-npm install vue-rate --save
+npm install vue-rate@next --save
+// or yarn add vue-rate@next
 ```
 
 Import Vue Rate into your app
 
 ```javascript
+import { createApp } from 'vue'
 import rate from 'vue-rate'
 import 'vue-rate/dist/vue-rate.css'
 
-Vue.use(rate)
+createApp(App)
+  .use(rate)
+  .mount('#app')
 ```
 
 Use HTML template
@@ -83,17 +88,35 @@ Then add Rate component. `iconref` must be symbol's id
 - `v-model`
 
 ```javascript
-new Vue({
-  ...
+export default {
   data: {
-    return () {
-      myRate: 0
-    }
+    return () { myRate: 0 }
   }
-  ...
-})
+}
 ```
 
+or `setup()` in Option API
+```javascript
+import { ref } from 'vue';
+
+export default {
+  setup () {
+    const myRate = ref(0);
+    return { myRate }
+  }
+}
+```
+
+or Composition API with `<script setup>`
+```javascript
+<script setup>
+  import { ref } from 'vue';
+  const myRate = ref(0);
+}
+<script>
+```
+
+And bind to component
 ```html
 <rate :length="5" v-model="myRate" />
 ```
@@ -101,18 +124,15 @@ new Vue({
 ## Events
 
 ```javascript
-new Vue({
-  ...
-  methods: {
-    onBeforeRate (rate) {
-      alert(rate)
-    },
-    onAfterRate (rate) {
-      alert(rate)
-    }
-  }
-  ...
-})
+<script setup>
+function onBeforeRate (rate) {
+  alert(rate)
+}
+
+function onAfterRate (rate) {
+  alert(rate)
+}
+</script>
 ```
 
 ```html
@@ -125,8 +145,8 @@ new Vue({
 3. Make your changes on `src/Rate.vue`
 4. Build the package
 ```bash
-yarn build
-# or npm run build
+npm run build
+# or yarn build
 ```
 5. Commit and create PR
 

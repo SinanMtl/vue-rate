@@ -1,7 +1,7 @@
 import Rate from './src/Rate.vue'
 
-function install(Vue) {
-	Vue.component(Rate.name, Rate)
+function install(Vue, options = {}) {
+	Vue.component(options.name || Rate.name || "rate", Rate)
 	global.Rate = Rate
 }
 
