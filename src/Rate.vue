@@ -1,6 +1,7 @@
 <template>
   <div v-if="length > 0" class="Rate">
     <svg
+      v-if="!slots.default && iconref === 'icon-star-full'"
       style="position: absolute; width: 0; height: 0;"
       width="0"
       height="0"
@@ -26,7 +27,9 @@
         @click="setRate(n)"
         @keyup="onOver(n)"
         @keyup.enter="setRate(n)">
+        <slot v-if="slots.default" _class="hello"></slot>
         <svg
+          v-else
           class="icon"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +46,9 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, onBeforeMount } from 'vue'
+import { ref, watch, onBeforeMount, useSlots } from 'vue'
 
+const slots = useSlots();
 const emit = defineEmits(["before-rate", "update:modelValue", "after-rate"]);
 const props = defineProps({
   modelValue: {type: [Number, String], default: 0},
@@ -80,9 +84,6 @@ function setRate (index) {
   emit('after-rate', rate.value)
 }
 function isFilled (index) { return index <= over.value }
-function isEmpty (index) {
-  return index > over.value || !props.modelValue && !over.value
-}
 
 watch(
   () => props.modelValue,

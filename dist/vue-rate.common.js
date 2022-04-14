@@ -206,37 +206,41 @@ const _hoisted_1 = {
   key: 0,
   class: "Rate"
 }
-const _hoisted_2 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("svg", {
+const _hoisted_2 = {
+  key: 0,
   style: {"position":"absolute","width":"0","height":"0"},
   width: "0",
   height: "0",
   version: "1.1",
   xmlns: "http://www.w3.org/2000/svg",
   "xmlns:xlink": "http://www.w3.org/1999/xlink"
-}, [
-  /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("defs", null, [
-    /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("symbol", {
-      id: "icon-star-full",
-      viewBox: "0 0 32 32"
-    }, [
-      /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("path", { d: "M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z" })
-    ])
+}
+const _hoisted_3 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("defs", null, [
+  /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("symbol", {
+    id: "icon-star-full",
+    viewBox: "0 0 32 32"
+  }, [
+    /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("path", { d: "M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z" })
   ])
 ], -1)
-const _hoisted_3 = ["name", "required"]
-const _hoisted_4 = ["disabled", "onMouseover", "onMouseout", "onClick", "onKeyup"]
-const _hoisted_5 = {
+const _hoisted_4 = [
+  _hoisted_3
+]
+const _hoisted_5 = ["name", "required"]
+const _hoisted_6 = ["disabled", "onMouseover", "onMouseout", "onClick", "onKeyup"]
+const _hoisted_7 = {
+  key: 1,
   class: "icon",
   version: "1.1",
   xmlns: "http://www.w3.org/2000/svg",
   "xmlns:xlink": "http://www.w3.org/1999/xlink"
 }
-const _hoisted_6 = ["xlink:href"]
-const _hoisted_7 = {
+const _hoisted_8 = ["xlink:href"]
+const _hoisted_9 = {
   key: 0,
   class: "count"
 }
-const _hoisted_8 = {
+const _hoisted_10 = {
   key: 1,
   class: "desc"
 }
@@ -262,6 +266,7 @@ const _hoisted_8 = {
 
 const props = __props
 
+const slots = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.useSlots)();
 
 
 
@@ -286,9 +291,6 @@ function setRate (index) {
   emit('after-rate', rate.value)
 }
 function isFilled (index) { return index <= over.value }
-function isEmpty (index) {
-  return index > over.value || !props.modelValue && !over.value
-}
 
 (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.watch)(
   () => props.modelValue,
@@ -312,13 +314,15 @@ function isEmpty (index) {
 return (_ctx, _cache) => {
   return (__props.length > 0)
     ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", _hoisted_1, [
-        _hoisted_2,
+        (!(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.unref)(slots).default && __props.iconref === 'icon-star-full')
+          ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("svg", _hoisted_2, _hoisted_4))
+          : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true),
         (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("input", {
           type: "hidden",
           name: __props.name,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => ((rate).value = $event)),
           required: __props.required
-        }, null, 8, _hoisted_3), [
+        }, null, 8, _hoisted_5), [
           [external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.vModelText, rate.value]
         ]),
         ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(true), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.Fragment, null, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.renderList)(__props.length, (n) => {
@@ -335,21 +339,26 @@ return (_ctx, _cache) => {
               (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.withKeys)($event => (setRate(n)), ["enter"])
             ]
           }, [
-            ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("svg", _hoisted_5, [
-              (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("use", {
-                "xlink:href": `#${__props.iconref}`
-              }, null, 8, _hoisted_6)
-            ]))
-          ], 42, _hoisted_4))
+            ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.unref)(slots).default)
+              ? (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.renderSlot)(_ctx.$slots, "default", {
+                  key: 0,
+                  _class: "hello"
+                })
+              : ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("svg", _hoisted_7, [
+                  (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("use", {
+                    "xlink:href": `#${__props.iconref}`
+                  }, null, 8, _hoisted_8)
+                ]))
+          ], 42, _hoisted_6))
         }), 128)),
         (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("div", {
           class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["Rate__view", {disabled: __props.disabled}])
         }, [
           (__props.showcount)
-            ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("span", _hoisted_7, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(over.value), 1))
+            ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("span", _hoisted_9, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(over.value), 1))
             : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true),
           (__props.ratedesc.length > 0)
-            ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("span", _hoisted_8, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(__props.ratedesc[over.value - 1]), 1))
+            ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("span", _hoisted_10, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(__props.ratedesc[over.value - 1]), 1))
             : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)
         ], 2)
       ]))
@@ -358,10 +367,10 @@ return (_ctx, _cache) => {
 }
 
 });
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/Rate.vue?vue&type=style&index=0&id=1308bdba&lang=css
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/Rate.vue?vue&type=style&index=0&id=76304c58&lang=css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/Rate.vue?vue&type=style&index=0&id=1308bdba&lang=css
+;// CONCATENATED MODULE: ./src/Rate.vue?vue&type=style&index=0&id=76304c58&lang=css
 
 ;// CONCATENATED MODULE: ./src/Rate.vue
 

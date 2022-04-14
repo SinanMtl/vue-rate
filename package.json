@@ -1,6 +1,6 @@
 {
 	"name": "vue-rate",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "Rate component for Vue",
 	"main": "dist/vue-rate.umd.min.js",
 	"types": "dist/vue-rate.umd.min.d.ts",

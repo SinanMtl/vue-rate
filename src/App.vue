@@ -76,7 +76,48 @@
 
     <h2>Customization</h2>
     <div class="grid">
-      <div class="flex-primary">
+      <p class="col-2 m-b-20">
+        <strong>Via Slot</strong>
+        <rate :length="5" :value="3" :ratedesc="desc" class="viaSlot">
+          <svg class="icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12.034 7.074H19.416L13.445 11.448L15.726 18.524L9.75201 14.151L3.77901 18.524L6.06101 11.448L0.0880127 7.075H7.47001L9.75201 0.002V0L12.034 7.075V7.074Z"
+              fill="currentColor"/>
+          </svg>
+        </rate>
+        <details>
+          <summary>Example</summary>
+          <div class="code">
+            <pre>
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;rate :length="5" class="viaSlot"&gt;
+      &lt;svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M12.034 7.074H19.416L13.445 11.448L15.726 18.524L9.75201 14.151L3.77901 18.524L6.06101 11.448L0.0880127 7.075H7.47001L9.75201 0.002V0L12.034 7.075V7.074Z"
+          fill="currentColor"/&gt;
+      &lt;/svg&gt;
+    &lt;/rate&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style&gt;
+.RateCustom.viaSlot .icon {
+  width: 25px;
+  height: 25px;
+}
+.Rate.viaSlot .Rate__star.filled{color: #813d1a;}
+.Rate.viaSlot .Rate__star.hover{color: #E67136;}
+&lt;/style&gt;</pre>
+          </div>
+        </details>
+      </p>
+      <p class="col-2">
+        <strong>Via SVG Symbol</strong>
         <svg
           style="position: absolute; width: 0; height: 0;"
           width="0"
@@ -121,7 +162,7 @@
 &lt;/style&gt;</pre>
           </div>
         </details>
-      </div>
+      </p>
     </div>
   </div>
 </template>
@@ -184,7 +225,8 @@ body {
 
 .code pre{margin: 0}
 
-.Rate.RateCustom .icon {
+.Rate.RateCustom .icon,
+.Rate.viaSlot .icon {
   width: 25px;
   height: 25px;
 }
@@ -192,9 +234,13 @@ body {
 .Rate.RateCustom .Rate__star.filled{color: teal;}
 .Rate.RateCustom .Rate__star.hover{color: red;}
 
-.flex-primary{ flex: 1; width: 100%; }
-.grid [class*=col-]{padding: 0 20px;}
-.grid .col-3{width: 100%}
+.Rate.viaSlot .Rate__star.filled{color: #813d1a;}
+.Rate.viaSlot .Rate__star.hover{color: #E67136;}
+
+.m-b-20{margin-bottom: 20px;}
+
+.flex-primary{ width: 100%; }
+.grid [class*=col-]{width: 100%; padding: 0 20px;}
 
 @media screen and (min-width: 768px) {
   .grid .col-3{width: 50%;}
