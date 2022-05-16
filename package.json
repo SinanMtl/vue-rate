@@ -1,6 +1,6 @@
 {
 	"name": "vue-rate",
-	"version": "3.1.0",
+	"version": "3.1.1",
 	"description": "Rate component for Vue",
 	"main": "dist/vue-rate.umd.min.js",
 	"types": "dist/vue-rate.umd.min.d.ts",
@@ -18,7 +18,9 @@
 	],
 	"author": "Sinan Mutlu <sinanm17@gmail.com>",
 	"license": "MIT",
-	"sideEffects": false,
+	"sideEffects": [
+		"**/*.css"
+	],
 	"bugs": {
 		"url": "https://github.com/SinanMtl/vue-rate/issues"
 	},
